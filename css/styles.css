@@ -112,25 +112,56 @@ body {
 
 
 
-/* Header */
-.seccion-header {
+/* Estilos generales para todos los headers */
+.header-base {
   text-align: center;
   padding: 10%;
-  min-height: 40%;
-  background-image: url("../images/rs-background.png");
+  min-height: 50%;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   color: white;
 }
 
-.seccion-header h1, .seccion-header p {
-  background-color: #acb89ec1; 
+/* Aplicar background-image según la página */
+.seccion-header { 
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.9)), url("../images/rs-background.png"); 
+}
+
+.header-menu { 
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/menu.webp"); 
+}
+
+.header-nosotros { 
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/nosotros.png"); 
+}
+
+.header-galeria { 
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/galeria-header.png"); 
+}
+
+.header-contacto { 
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/contacto.png"); 
+}
+
+/* Estilos generales para los títulos de los headers */
+.header-base h1 {
   padding: 10px 15px;
   display: block; 
-  width: fit-content; 
-  max-width: 90%; 
-  border-radius: 5px;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  font-size: 2.5rem;
+  font-weight: 100;
+}
+
+
+hr {
+  text-align: center;
+  margin: auto;
+  border-bottom: 2px solid white;
+  border-bottom-width: 2px;
+  width: 6rem;
+  opacity: 1;
 }
 
 .logo img{
@@ -239,20 +270,6 @@ main {
       text-align: center;
       grid-column: auto;
   }
-}
-
-
-.menu-body{
-  background-color: white;
-}
-
-.menu-title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-top: 5%;
-  color: #acb89ec1;
-  font-size: 3em;
 }
 
 .menu-container {
