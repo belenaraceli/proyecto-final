@@ -367,6 +367,93 @@ main {
   border-left: 5px solid #a4a285;
 }
 
+/* Main Contacto */
+
+.contacto-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.contacto-info, .contacto-form {
+  width: 80%;
+  max-width: 600px;
+  margin-bottom: 30px;
+}
+
+.mapa {
+  margin: 20px 0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Botón Enviar - Igual al botón 'Ver Menú' */
+.contacto-form button {
+  padding: 10px 20px;
+  border: 2px solid #f8f8f8;
+  text-decoration: none;
+  color: #f8f8f8;
+  margin-top: 20px;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  background-color: #bac8ab;
+  border-radius: 5px;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+/* Efecto hover */
+.contacto-form button:hover {
+  border: 2px solid #bac8ab;
+  color: #bac8ab;
+  background-color: #f8f8f8;
+}
+
+
+/* Ajuste del formulario: Fuente más grande y más espaciado */
+.contacto-form {
+  font-size: 1.1em; /* Un poco más grande */
+}
+
+.contacto-form .mb-3 {
+  margin-bottom: 20px; /* Más espacio entre los campos */
+}
+
+.contacto-form label {
+  font-weight: bold;
+}
+
+/* Mejor espaciado en la sección de contacto */
+.contacto-info p {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+
+
+@media (min-width: 768px) {
+  .contacto-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      padding: 60px 10%;
+      text-align: left;
+  }
+
+  .contacto-info, .contacto-form {
+      width: 100%;
+      max-width: none;
+  }
+
+  .contacto-info {
+      border-right: 2px solid #ccc;
+      padding-right: 40px;
+  }
+}
 
 
 footer {
