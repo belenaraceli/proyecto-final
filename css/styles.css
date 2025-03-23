@@ -111,8 +111,6 @@ body {
 }
 
 
-
-/* Estilos generales para todos los headers */
 .header-base {
   text-align: center;
   padding: 10%;
@@ -123,7 +121,6 @@ body {
   color: white;
 }
 
-/* Aplicar background-image según la página */
 .seccion-header { 
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.9)), url("../images/rs-background.png"); 
 }
@@ -144,7 +141,6 @@ body {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/contacto.png"); 
 }
 
-/* Estilos generales para los títulos de los headers */
 .header-base h1 {
   padding: 10px 15px;
   display: block; 
@@ -190,7 +186,7 @@ hr {
   background-color: #f8f8f8;
 }
 
-/* About */
+/* Main Inicio */
 main {
   display: grid;
   grid-template-columns: 1fr 1fr; 
@@ -272,6 +268,9 @@ main {
   }
 }
 
+
+/* Menu */
+
 .menu-container {
   display: flex;
   justify-content: space-around;
@@ -342,6 +341,32 @@ main {
       font-size: 1.2em;
   }
 }
+
+
+/* Main Nosotros */
+
+.about-values {
+  list-style: none;
+  padding: 0;
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+
+.about-values li {
+  padding-left: 1.5em;
+  text-indent: -1.5em;
+}
+
+.about-quote {
+  text-align: center;
+  font-style: italic;
+  font-size: 1.5em;
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-left: 5px solid #a4a285;
+}
+
 
 
 footer {
