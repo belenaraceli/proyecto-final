@@ -1,0 +1,173 @@
+@use 'variables' as *;
+
+@mixin button-styles(
+  $padding: 10px 20px,
+  $border-color: $color-texto-claro,
+  $text-color: $color-texto-claro,
+  $background-color: $color-primario,
+  $font-size: 1.2em,
+  $border-radius: $border-radius-sm, 
+  $width: $width-auto,
+  $text-align: center,
+  $cursor: pointer,
+  $hover-border-color: $color-primario,
+  $hover-text-color: $color-primario,
+  $hover-background-color: $color-texto-claro,
+  $box-shadow: none 
+) {
+  padding: $padding;
+  border: 2px solid $border-color;
+  text-decoration: none;
+  color: $text-color;
+  margin-top: 20px;
+  font-size: $font-size;
+  text-transform: uppercase;
+  background-color: $background-color;
+  border-radius: $border-radius;
+  width: $width;
+  text-align: $text-align;
+  cursor: $cursor;
+  box-shadow: $box-shadow; 
+  transition: $transition-fast; 
+
+  &:hover {
+    border: 2px solid $hover-border-color;
+    color: $hover-text-color;
+    background-color: $hover-background-color;
+  }
+}
+
+
+@mixin header-styles(
+  $bg-image, 
+  $gradient-dark: $color-gradient-dark, 
+  $gradient-light: $color-gradient-light, 
+  $text-color: $color-texto-claro,
+  $padding: 10%,
+  $min-height: 50%,
+  $font-size: $font-size-xxl
+) {
+  text-align: center;
+  padding: $padding;
+  min-height: $min-height;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: $text-color;
+  background-image: linear-gradient($gradient-light, $gradient-dark), url($bg-image);
+
+  h1 {
+    padding: $padding-base $padding-lg;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    font-size: $font-size;
+    font-weight: 100;
+  }
+
+  hr {
+    text-align: center;
+    margin: auto;
+    border-bottom: 2px solid $text-color;
+    width: 6rem;
+    opacity: 1;
+  }
+
+  .logo img {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    align-items: center;
+  }
+}
+
+@mixin footer-styles(
+  $bg-color: $color-texto-oscuro, 
+  $text-color: $color-texto-claro, 
+  $padding-vertical: $padding-lg, 
+  $padding-horizontal: $padding-xl 
+) {
+  background-color: $bg-color;
+  color: $text-color;
+  padding: $padding-vertical $padding-horizontal;
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .footer-logo img {
+    max-width: 100px;
+    height: auto;
+  }
+
+  .social-links,
+  .footer-menu {
+    text-align: center;
+  }
+
+  .social-links p,
+  .footer-menu p {
+    margin: $margin-base 0; 
+  }
+
+  .footer-menu a,
+  .social-links p {
+    color: $text-color;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .footer-menu a:hover {
+    text-decoration: underline;
+  }
+
+  .footer-text {
+    text-align: center;
+    font-size: $font-size-base * 0.875; 
+    margin-top: $margin-base;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    .footer-content {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .footer-logo {
+      margin-bottom: $margin-lg;
+    }
+
+    .social-links {
+      margin-bottom: $margin-lg;
+    }
+
+    .footer-menu {
+      text-align: center;
+    }
+  }
+}
+
+
+@mixin flex-center($direction: row, $justify: center, $align: center, $wrap: nowrap) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    flex-wrap: $wrap;
+  }
+  
+  @mixin transition($property: all, $duration: $transition-fast) {
+    transition: $property $duration;
+  }
+  
+  @mixin box-shadow($shadow: $box-shadow-base) {
+    box-shadow: $shadow;
+  }
+  
+  @mixin border-radius($radius: $border-radius-lg) {
+    border-radius: $radius;
+  }
+  

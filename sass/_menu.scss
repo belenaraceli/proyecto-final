@@ -1,0 +1,78 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+/* Estilos generales del menú */
+.menu-container {
+  @include flex-center(row, space-around, center, wrap);
+  padding: $padding-xl;
+
+  h2 {
+    color: $color-texto-oscuro;
+    font-weight: lighter;
+  }
+}
+
+/* Estilos base reutilizables */
+%menu-block-base {
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+  overflow: hidden;
+  background-color: $color-fondo;
+  @include border-radius();
+  @include box-shadow();
+  @include transition(transform);
+}
+
+/* Bloques de menú */
+.menu-block {
+  @extend %menu-block-base;
+  width: 25%;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  img {
+    width: $width-full;
+    height: auto;
+    border-top-left-radius: $border-radius-lg;
+    border-top-right-radius: $border-radius-lg;
+  }
+
+  /* Lista dentro del menú */
+  .menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: $color-hover;
+    color: $color-texto-oscuro;
+    position: absolute;
+    width: $width-full;
+    bottom: -100%;
+    @include transition(bottom, $transition-slow);
+    font-size: $font-size-lg;
+  }
+
+  &:hover .menu-list {
+    bottom: 0;
+    padding: $padding-base 0;
+  }
+}
+
+/* Responsividad con @if */
+@media (max-width: $breakpoint-mobile) {
+  .menu-container {
+    @include flex-center(column, center, center);
+    padding: $padding-lg;
+  }
+
+  .menu-block {
+    width: 80%;
+    margin-bottom: $margin-lg;
+  }
+
+  .menu-list {
+    font-size: $font-size-base * 1.2;
+  }
+}
