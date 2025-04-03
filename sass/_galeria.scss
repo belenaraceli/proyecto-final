@@ -1,0 +1,49 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.galeria-container {
+  text-align: center;
+  padding: 70px 5%;
+  background-color: $color-fondo;
+  color: $color-texto-oscuro;
+}
+
+.grid-galeria {
+  @include flex-center(row, center, center);
+  gap: 30px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  scrollbar-width: thin;
+  max-width: 90vw;
+  margin: 0 auto;
+}
+
+.grid-galeria img {
+  flex: 0 0 auto;
+  max-width: 500px;
+  max-height: 400px;
+  height: auto;
+  @include border-radius();
+  object-fit: cover;
+  @include transition(transform, $transition-fast);
+  @include box-shadow();
+
+  &:hover {
+    transform: scale(1.05);
+    @include box-shadow($box-shadow-hover);
+  }
+}
+
+// 🌐 Media Queries Responsivas con Condicionales
+@media (max-width: $breakpoint-mobile) {
+  .grid-galeria {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .grid-galeria img {
+    max-width: $width-full;
+    max-height: none;
+  }
+}

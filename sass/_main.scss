@@ -1,0 +1,144 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+/* Estilos generales del main */
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: minmax(auto, 100%);
+  padding: $padding-xl 10%;
+  background-color: $color-fondo;
+  color: $color-texto-oscuro;
+  border-left: 2px solid $color-border;
+  border-right: 2px solid $color-border;
+  align-items: start;
+}
+
+/* Sección about */
+.about {
+  display: contents;
+
+  h2, h3 {
+    font-size: $font-size-xl;
+    text-align: center;
+    border-bottom: 2px solid $color-border;
+  }
+
+  h3 {
+    font-style: italic;
+    grid-column: 1 / -1;
+    margin-bottom: $margin-lg;
+  }
+
+  p {
+    font-size: $font-size-lg;
+    margin: auto;
+    padding: 0% 12%;
+  }
+}
+
+.about-text {
+  grid-column: 1;
+  text-align: left;
+  @include flex-center(column, flex-start, stretch);
+  height: 100%;
+}
+
+.about-image {
+  grid-column: 2;
+  text-align: center;
+  border-left: 2px solid $color-border;
+  max-width: fit-content;
+
+  img {
+    max-width: 80%;
+    margin: 8%;
+    height: auto;
+    display: block;
+    @include border-radius();
+  }
+}
+
+/* Responsive */
+@media (max-width: $breakpoint-mobile) {
+  main {
+    grid-template-columns: 1fr;
+    padding: $padding-lg 5%;
+    text-align: center;
+  }
+
+  .about-text, .about-image {
+    grid-column: auto;
+    text-align: center;
+    border: none;
+  }
+
+  .about h3 {
+    text-align: center;
+    grid-column: auto;
+  }
+}
+
+/* Lista de valores con bucle @each */
+$values: (
+  'Compromiso',
+  'Calidad',
+  'Responsabilidad',
+  'Innovación'
+);
+
+.about-values {
+  list-style: none;
+  padding: 0;
+  font-size: $font-size-base * 1.2;
+  line-height: 1.6;
+
+  @each $value in $values {
+    li:before {
+      content: '\2022 ' + $value;
+      font-weight: bold;
+    }
+  }
+}
+
+/* Estilo de cita */
+.about-quote {
+  text-align: center;
+  font-style: italic;
+  font-size: $font-size-lg;
+  margin-top: $margin-xl;
+  padding: $padding-lg;
+  background-color: $color-texto-claro;
+  border-left: 5px solid $color-primario;
+}
+
+/* Sección Contacto */
+.contacto-container {
+  @include flex-center(column, center, center);
+  text-align: center;
+  padding: $padding-xl $padding-lg;
+}
+
+.contacto-info, .contacto-form {
+  width: 80%;
+  max-width: 600px;
+  margin-bottom: $margin-xl;
+}
+
+/* Media Queries con @if */
+@media (min-width: 768px) {
+  .contacto-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: $padding-xl 10%;
+    text-align: left;
+  }
+
+  .contacto-info {
+    @if $color-border == #ccc {
+      border-right: 2px solid $color-border;
+    }
+    padding-right: $padding-lg;
+  }
+}

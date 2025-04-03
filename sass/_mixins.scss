@@ -1,5 +1,13 @@
 @use 'variables' as *;
 
+@mixin font-style($family, $type, $weight, $style) {
+  .#{$family}-regular {
+    font-family: $family, $type;
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
+
 @mixin button-styles(
   $padding: 10px 20px,
   $border-color: $color-texto-claro,
@@ -37,6 +45,14 @@
   }
 }
 
+  .boton-menu {
+    @include button-styles($font-size: 30px);
+  }
+  
+  .contacto-form button {
+    @include button-styles($width: $width-full);
+  }
+  
 
 @mixin header-styles(
   $bg-image, 
@@ -80,6 +96,26 @@
     align-items: center;
   }
 }
+
+.seccion-header { 
+      @include header-styles("../images/rs-background.png");
+  }
+    
+  .header-menu { 
+      @include header-styles("../images/menu.webp");
+  }
+    
+  .header-nosotros { 
+      @include header-styles("../images/nosotros.png");
+  }
+    
+  .header-galeria { 
+      @include header-styles("../images/galeria-header.png");
+  }
+    
+  .header-contacto { 
+      @include header-styles("../images/contacto.png");
+  }
 
 @mixin footer-styles(
   $bg-color: $color-texto-oscuro, 
@@ -150,7 +186,11 @@
   }
 }
 
+  footer {
+      @include footer-styles();
+  }
 
+  
 @mixin flex-center($direction: row, $justify: center, $align: center, $wrap: nowrap) {
     display: flex;
     flex-direction: $direction;
@@ -171,3 +211,7 @@
     border-radius: $radius;
   }
   
+
+  
+    
+
