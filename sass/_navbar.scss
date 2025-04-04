@@ -1,6 +1,7 @@
 @use "variables" as *;
 @use "mixins" as *;
 
+
 // 🔹 Placeholder para estructura base del navbar
 %navbar-base {
   position: fixed;
@@ -39,7 +40,7 @@
     font-size: $font-size-lg;
     padding: 0 $padding-xl;
     width: $width-full;
-    
+
   a {
     @include link-styles($color-texto-claro, $color-primario, $color-texto-claro);
   }
