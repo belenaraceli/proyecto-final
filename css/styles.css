@@ -52,7 +52,7 @@
   background-position: center;
   background-repeat: no-repeat;
   color: #f8f8f8;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.9)), url("../images/rs-background.png");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.9)), url("../images/rs-background.webp");
 }
 .seccion-header h1 {
   padding: 10px 20px;
@@ -116,7 +116,7 @@
   background-position: center;
   background-repeat: no-repeat;
   color: #f8f8f8;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.9)), url("../images/nosotros.png");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.9)), url("../images/nosotros.webp");
 }
 .header-nosotros h1 {
   padding: 10px 20px;
@@ -148,7 +148,7 @@
   background-position: center;
   background-repeat: no-repeat;
   color: #f8f8f8;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.9)), url("../images/galeria-header.png");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.9)), url("../images/galeria-header.webp");
 }
 .header-galeria h1 {
   padding: 10px 20px;
@@ -180,7 +180,7 @@
   background-position: center;
   background-repeat: no-repeat;
   color: #f8f8f8;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.9)), url("../images/contacto.png");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.9)), url("../images/contacto.webp");
 }
 .header-contacto h1 {
   padding: 10px 20px;
@@ -442,7 +442,6 @@ main {
   border-radius: 10px;
 }
 
-/* Responsive */
 @media (max-width: 767px) {
   main {
     grid-template-columns: 1fr;
@@ -459,7 +458,6 @@ main {
     grid-column: auto;
   }
 }
-/* Lista de valores con bucle @each */
 .about-values {
   list-style: none;
   padding: 0;
@@ -483,7 +481,6 @@ main {
   font-weight: bold;
 }
 
-/* Estilo de cita */
 .about-quote {
   text-align: center;
   font-style: italic;
@@ -494,7 +491,6 @@ main {
   border-left: 5px solid #bac8ab;
 }
 
-/* Sección Contacto */
 .contacto-container {
   display: flex;
   flex-direction: column;
@@ -511,7 +507,6 @@ main {
   margin-bottom: 40px;
 }
 
-/* Media Queries con @if */
 @media (min-width: 768px) {
   .contacto-container {
     display: grid;

@@ -59,7 +59,7 @@ main {
   }
 }
 
-/* Responsive */
+
 @media (max-width: $breakpoint-mobile) {
   main {
     grid-template-columns: 1fr;
@@ -79,7 +79,6 @@ main {
   }
 }
 
-/* Lista de valores con bucle @each */
 $values: (
   'Compromiso',
   'Calidad',
@@ -101,7 +100,7 @@ $values: (
   }
 }
 
-/* Estilo de cita */
+
 .about-quote {
   text-align: center;
   font-style: italic;
@@ -112,7 +111,7 @@ $values: (
   border-left: 5px solid $color-primario;
 }
 
-/* Sección Contacto */
+
 .contacto-container {
   @include flex-center(column, center, center);
   text-align: center;
@@ -125,7 +124,7 @@ $values: (
   margin-bottom: $margin-xl;
 }
 
-/* Media Queries con @if */
+
 @media (min-width: 768px) {
   .contacto-container {
     display: grid;

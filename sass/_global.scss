@@ -6,7 +6,6 @@
   padding: 0;
 }
 
-// 🔹 Mixin para fuentes
 @include font-style("Viaoda Libre", serif, 400, normal);
 
 body {
@@ -15,7 +14,6 @@ body {
   color: $color-texto-claro;
 }
 
-// 🔹 Placeholder para fuentes
 %font-primary {
   font-family: $font-principal;
 }

@@ -2,7 +2,7 @@
 @use "mixins" as *;
 
 
-// 🔹 Placeholder para estructura base del navbar
+
 %navbar-base {
   position: fixed;
   top: 0;
@@ -11,7 +11,7 @@
   transition: background-color $transition-fast, box-shadow $transition-fast, padding $transition-fast;
 }
 
-// 🔹 Mixins para reutilizar estilos
+
 @mixin link-styles($color, $hover-color, $hover-bg) {
   text-decoration: none;
   color: $color;
@@ -27,7 +27,7 @@
   }
 }
 
-// 🔹 Implementación del Navbar
+
 .custom-navbar {
   @extend %navbar-base;
   background-color: transparent;
@@ -46,14 +46,14 @@
   }
 }
 
-// 🔹 Navbar al hacer scroll
+
 .navbar-scrolled {
   background-color: $color-primario !important;
   @include box-shadow($box-shadow-base);
   padding-bottom: 5px;
 }
 
-// 🔹 Estilos para el botón de menú en mobile
+
 .menu-toggle {
   display: none;
   background: none;
@@ -63,7 +63,7 @@
   cursor: pointer;
 }
 
-// 🔹 Media Queries con condicionales
+
 @media (max-width: $breakpoint-mobile) {
   .menu-toggle {
     display: block;
@@ -94,7 +94,7 @@
   }
 }
 
-// 🔹 Mapa de colores dinámico para posibles variantes de navbar
+
 $navbar-colors: (
   default: transparent,
   scrolled: $color-primario,
@@ -108,7 +108,7 @@ $navbar-colors: (
   }
 }
 
-// 🔹 Bucle para generar diferentes padding en la navbar según el tamaño de pantalla
+
 @for $i from 1 through 3 {
   .navbar-padding-#{$i} {
     padding: $i * 10px 0;

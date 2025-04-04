@@ -98,7 +98,7 @@
 }
 
 .seccion-header { 
-      @include header-styles("../images/rs-background.png");
+      @include header-styles("../images/rs-background.webp");
   }
     
   .header-menu { 
@@ -106,15 +106,15 @@
   }
     
   .header-nosotros { 
-      @include header-styles("../images/nosotros.png");
+      @include header-styles("../images/nosotros.webp");
   }
     
   .header-galeria { 
-      @include header-styles("../images/galeria-header.png");
+      @include header-styles("../images/galeria-header.webp");
   }
     
   .header-contacto { 
-      @include header-styles("../images/contacto.png");
+      @include header-styles("../images/contacto.webp");
   }
 
 @mixin footer-styles(
